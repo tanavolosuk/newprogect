@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../product/product.dart';
+
 part 'prodResp.freezed.dart';
 part 'prodResp.g.dart';
 
@@ -7,7 +9,7 @@ part 'prodResp.g.dart';
 class ProResp with _$ProResp { //создали класс ProResp
 
   factory ProResp({ //factory - фабричный метод
-    @Default([]) List<dynamic> products, //Default - значение по умолчанию
+    @Default([]) List<Product> products, //Default - значение по умолчанию
     @Default(0) int total, 
     @Default(0) int skip,
     @Default(0) int limit,

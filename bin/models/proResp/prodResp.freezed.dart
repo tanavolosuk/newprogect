@@ -20,7 +20,9 @@ ProResp _$ProRespFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ProResp {
-  List<dynamic> get products => throw _privateConstructorUsedError;
+//factory - фабричный метод
+  List<Product> get products =>
+      throw _privateConstructorUsedError; //Default - значение по умолчанию
   int get total => throw _privateConstructorUsedError;
   int get skip => throw _privateConstructorUsedError;
   int get limit => throw _privateConstructorUsedError;
@@ -35,7 +37,7 @@ abstract class $ProRespCopyWith<$Res> {
   factory $ProRespCopyWith(ProResp value, $Res Function(ProResp) then) =
       _$ProRespCopyWithImpl<$Res, ProResp>;
   @useResult
-  $Res call({List<dynamic> products, int total, int skip, int limit});
+  $Res call({List<Product> products, int total, int skip, int limit});
 }
 
 /// @nodoc
@@ -60,7 +62,7 @@ class _$ProRespCopyWithImpl<$Res, $Val extends ProResp>
       products: null == products
           ? _value.products
           : products // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<Product>,
       total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
@@ -84,7 +86,7 @@ abstract class _$$ProRespImplCopyWith<$Res> implements $ProRespCopyWith<$Res> {
       __$$ProRespImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<dynamic> products, int total, int skip, int limit});
+  $Res call({List<Product> products, int total, int skip, int limit});
 }
 
 /// @nodoc
@@ -107,7 +109,7 @@ class __$$ProRespImplCopyWithImpl<$Res>
       products: null == products
           ? _value._products
           : products // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<Product>,
       total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
@@ -128,7 +130,7 @@ class __$$ProRespImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ProRespImpl implements _ProResp {
   _$ProRespImpl(
-      {final List<dynamic> products = const [],
+      {final List<Product> products = const [],
       this.total = 0,
       this.skip = 0,
       this.limit = 0})
@@ -137,15 +139,18 @@ class _$ProRespImpl implements _ProResp {
   factory _$ProRespImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProRespImplFromJson(json);
 
-  final List<dynamic> _products;
+//factory - фабричный метод
+  final List<Product> _products;
+//factory - фабричный метод
   @override
   @JsonKey()
-  List<dynamic> get products {
+  List<Product> get products {
     if (_products is EqualUnmodifiableListView) return _products;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_products);
   }
 
+//Default - значение по умолчанию
   @override
   @JsonKey()
   final int total;
@@ -193,16 +198,16 @@ class _$ProRespImpl implements _ProResp {
 
 abstract class _ProResp implements ProResp {
   factory _ProResp(
-      {final List<dynamic> products,
+      {final List<Product> products,
       final int total,
       final int skip,
       final int limit}) = _$ProRespImpl;
 
   factory _ProResp.fromJson(Map<String, dynamic> json) = _$ProRespImpl.fromJson;
 
-  @override
-  List<dynamic> get products;
-  @override
+  @override //factory - фабричный метод
+  List<Product> get products;
+  @override //Default - значение по умолчанию
   int get total;
   @override
   int get skip;
