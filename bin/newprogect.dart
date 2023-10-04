@@ -27,7 +27,7 @@ void main(List<String> arguments) async {
   //   }
   // }
 
-  resultMassive = productMassive.where((el) => el.brand == "Apple").toList();
+  resultMassive = productMassive.where((el) => brandList.contains(el.brand)).toList();
   //когда функция возращает правда то добавляется элемент
   for (var element in resultMassive) {
     textResult += '\n${element.title} за \$${element.price}';
